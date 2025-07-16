@@ -1,0 +1,64 @@
+{
+  "name": "framepeach-ui",
+  "version": "1.0.0",
+  "description": "FramePeach 3D Website Builder",
+  "type": "module",
+  "main": "electron.cjs",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "electron": "electron .",
+    "preview": "vite preview",
+    "electron-build": "npm run build && electron .",
+    "dist": "npm run build && electron-builder",
+    "pack": "electron-builder --dir",
+    "make": "electron-builder"
+  },
+  "build": {
+    "appId": "com.framepeach.3dbuilder",
+    "productName": "3D Builder UI",
+    "directories": {
+      "output": "electron-dist"
+    },
+    "files": [
+      "dist/**/*",
+      "electron.cjs",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@react-three/drei": "^9.104.0",
+    "@react-three/fiber": "^8.15.19",
+    "@theatre/core": "^0.7.2",
+    "@theatre/studio": "^0.7.2",
+    "@types/three": "^0.177.0",
+    "better-sqlite3": "^12.2.0",
+    "lucide-react": "^0.294.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.6.2",
+    "three": "^0.177.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "electron": "^37.1.0",
+    "electron-builder": "^26.0.12",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "vite": "^5.0.8"
+  }
+}
