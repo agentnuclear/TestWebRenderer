@@ -4,9 +4,9 @@ import * as THREE from 'three';
 export const UE5_CONFIG = {
   exposure: 1.0,
   whitePoint: 1.0,
-  shadowBias: -0.00025,
-  shadowNormalBias: 0.5,
-  shadowRadius: 2.5,
+  shadowBias: -0.00003,
+  shadowNormalBias: 0.01,
+  shadowRadius: 5,
   fogDensity: 0.02,
   fogHeight: 0.0,
   fogHeightFalloff: 0.2,

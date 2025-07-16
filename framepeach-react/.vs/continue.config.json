@@ -1,0 +1,9 @@
+{
+  "models": [
+    {
+      "title": "Phi-3 (Ollama)",
+      "provider": "ollama",
+      "model": "phi3"
+    }
+  ]
+}

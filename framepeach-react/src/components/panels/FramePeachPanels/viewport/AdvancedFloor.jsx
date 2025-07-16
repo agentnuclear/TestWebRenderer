@@ -69,25 +69,26 @@ const AdvancedFloor = ({ renderMode }) => {
     }
     
     return (
-      <meshStandardMaterial
-        map={floorTexture}
-        roughness={0.8}
-        metalness={0.0}
-        envMapIntensity={0.3}
-      />
+      // <meshStandardMaterial
+      //   map={floorTexture}
+      //   roughness={0.8}
+      //   metalness={0.0}
+      //   envMapIntensity={0.3}
+      // />
+      <meshStandardMaterial color="#555" />
     );
   }, [floorTexture, renderMode]);
   
   return (
     <mesh
-      ref={floorRef}
-      rotation={[-Math.PI / 2, 0, 0]}
-      position={[0, 0, 0]}
-      receiveShadow
-    >
-      <planeGeometry args={[100, 100]} />
-      {floorMaterial}
-    </mesh>
+    ref={floorRef}
+    rotation={[-Math.PI / 2, 0, 0]}
+    position={[0, -0.001, 0]} // slight offset to prevent shadow overlap
+    receiveShadow
+  >
+    <planeGeometry args={[100, 100]} />
+    {floorMaterial}
+  </mesh>
   );
 };
 

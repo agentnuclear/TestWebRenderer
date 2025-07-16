@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect, useRef, useState, useCallback } from 'react';
 import { useThree, useFrame } from '@react-three/fiber';
 import { Grid, TransformControls, OrbitControls } from '@react-three/drei';
+import { ContactShadows } from '@react-three/drei';
 import * as THREE from 'three';
 import AdvancedEnvironment from './AdvancedEnvironment';
 import PostProcessingEffects from './PostProcessingEffects';
@@ -184,6 +185,18 @@ const Scene = ({
       
       {/* Enhanced Floor */}
       <AdvancedFloor renderMode={renderMode} />
+
+      {/* Contact Shadows */}
+      <ContactShadows
+        position={[0, 0.01, 0]}
+        scale={100}
+       opacity={0.4}
+       blur={1.5}
+       far={50}
+       //color="#000000"
+       //frames={1}
+
+      />
       
       {/* Grid Helper */}
       {showGrid && (
